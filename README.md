@@ -7,8 +7,10 @@ tabel "People" and insert two people in it.
 MapperScan bug?
 ---------------
 
-1. Run PersonServiceTest. It passes.  2. Comment out the annotations in
-`PersonMapper.java`, and add the following file called `PersonMapper.xml` to
+1. Run `PersonServiceTest`. It passes.
+
+2. Comment out the annotations in `PersonMapper.java`, and add the following
+file called `PersonMapper.xml` to
 src/main/resources/com/ludachrispeed/persistence/PersonMapper.xml:
 
 ```

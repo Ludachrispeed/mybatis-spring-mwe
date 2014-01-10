@@ -11,16 +11,17 @@ MapperScan bug?
 `PersonMapper.java`, and add the following file called `PersonMapper.xml` to
 src/main/resources/com/ludachrispeed/persistence/PersonMapper.xml:
 
-    <!DOCTYPE mapper
-        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+```
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-    <mapper namespace="com.ludachrispeed.persistence.PersonMapper">
+<mapper namespace="com.ludachrispeed.persistence.PersonMapper">
+    <select id="getByFirstName" parameterType="string" resultType="Person">
+        select * from PEOPLE where PEOPLE.FIRSTNAME = #{firstname}
+    </select>
 
-        <select id="getByFirstName" parameterType="string" resultType="Person">
-            select * from PEOPLE where PEOPLE.FIRSTNAME = #{firstname}
-        </select>
-
-    </mapper>
+</mapper>
+````
 
 3. Rerun PersonServiceTest. It fails.

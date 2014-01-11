@@ -11,7 +11,7 @@ MapperScan bug?
 
 2. Comment out the annotations in `PersonMapper.java`, and add the following
 file called `PersonMapper.xml` to
-src/main/resources/com/ludachrispeed/persistence/PersonMapper.xml:
+src/main/resources/example/persistence/PersonMapper.xml:
 
 ```
 <!DOCTYPE mapper

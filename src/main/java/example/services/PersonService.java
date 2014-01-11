@@ -1,10 +1,10 @@
-package com.ludachrispeed.services;
+package example.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.ludachrispeed.domain.Person;
-import com.ludachrispeed.persistence.PersonMapper;
+import example.domain.Person;
+import example.persistence.PersonMapper;
 
 @Service
 public class PersonService {

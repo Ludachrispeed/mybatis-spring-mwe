@@ -1,11 +1,11 @@
-package com.ludachrispeed.services;
+package example.services;
 
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.ludachrispeed.appconfig.DataSourceConfig;
-import com.ludachrispeed.appconfig.MyBatisConfig;
+import example.appconfig.DataSourceConfig;
+import example.appconfig.MyBatisConfig;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { DataSourceConfig.class, MyBatisConfig.class })

@@ -1,4 +1,4 @@
-package com.ludachrispeed.appconfig;
+package example.appconfig;
 
 import javax.sql.DataSource;
 
@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@MapperScan("com.ludachrispeed.persistence")
+@MapperScan("example.persistence")
 public class MyBatisConfig {
 
     /** Whatever {@link DataSource} bean that was created in the DataSourceConfig file */

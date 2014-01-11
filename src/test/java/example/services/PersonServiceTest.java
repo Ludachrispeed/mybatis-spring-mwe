@@ -1,4 +1,4 @@
-package com.ludachrispeed.services;
+package example.services;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,7 +6,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.ContextConfiguration;
 
-import com.ludachrispeed.domain.Person;
+import example.domain.Person;
+import example.services.PersonService;
 
 @ContextConfiguration
 public class PersonServiceTest extends AbstractServiceTest {

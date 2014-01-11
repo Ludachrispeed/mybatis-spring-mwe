@@ -1,9 +1,9 @@
-package com.ludachrispeed.persistence;
+package example.persistence;
 
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
-import com.ludachrispeed.domain.Person;
+import example.domain.Person;
 
 public interface PersonMapper {
 

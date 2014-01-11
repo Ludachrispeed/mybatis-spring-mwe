@@ -1,4 +1,4 @@
-package com.ludachrispeed.domain;
+package example.domain;
 
 public class Person {
 

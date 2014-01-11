@@ -1,4 +1,4 @@
-package com.ludachrispeed.appconfig;
+package example.appconfig;
 
 import javax.sql.DataSource;
 

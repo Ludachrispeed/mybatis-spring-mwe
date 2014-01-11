@@ -9,25 +9,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import example.persistence.MyMapper;
+
 @Configuration
-@MapperScan("example.persistence")
+@MapperScan(basePackageClasses = { MyMapper.class } )
 public class MyBatisConfig {
 
-    /** Whatever {@link DataSource} bean that was created in the DataSourceConfig file */
     @Autowired
     DataSource dataSource;
-
-    /**
-     * The {@link SqlSessionFactory} is the core MyBatis class which manages communication with the
-     * database.
-     * 
-     * @return a {@link SqlSessionFactory} configured to use the provided {@link DataSource}.
-     * @throws Exception when shit goes down
-     */
+    
     @Bean
     public SqlSessionFactory sqlSessionFactory() throws Exception {
         final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(dataSource);
+        sessionFactory.setTypeAliasesPackage("example.domain");
         return sessionFactory.getObject();
     }
 

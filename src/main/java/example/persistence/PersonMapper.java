@@ -5,8 +5,7 @@ import org.apache.ibatis.annotations.Select;
 
 import example.domain.Person;
 
-public interface PersonMapper {
+public interface PersonMapper extends MyMapper {
 
-//    @Select("select * from PEOPLE where PEOPLE.FIRSTNAME = #{firstname}")
     public Person getByFirstName(@Param("firstname") String firstname);
 }

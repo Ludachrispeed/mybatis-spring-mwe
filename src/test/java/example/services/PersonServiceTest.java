@@ -1,5 +1,8 @@
 package example.services;
 
+
+import static org.junit.Assert.*;
+
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
@@ -24,6 +27,8 @@ public class PersonServiceTest extends AbstractServiceTest {
     @Test
     public void testService() {
         final Person person = personService.getByFirstName("scooby");
+        assertEquals("scooby", person.getFirstname());
+        assertEquals("doo", person.getLastname());
         System.out.println(person);
     }
 }

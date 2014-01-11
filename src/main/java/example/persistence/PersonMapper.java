@@ -7,6 +7,6 @@ import example.domain.Person;
 
 public interface PersonMapper {
 
-    @Select("select * from PEOPLE where PEOPLE.FIRSTNAME = #{firstname}")
+//    @Select("select * from PEOPLE where PEOPLE.FIRSTNAME = #{firstname}")
     public Person getByFirstName(@Param("firstname") String firstname);
 }
